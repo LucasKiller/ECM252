@@ -1,6 +1,5 @@
 // import { createClient } from 'pexels'
 import pexelsClient from './utils/pexelsClient'
-import env from 'react-dotenv'
 import Busca from "./components/Busca"
 import React from 'react'
 import ListaImagens from './components/ListaImagens'
@@ -14,13 +13,15 @@ export default class App extends React.Component {
   }
 
   onBuscaRealizada = (termo) => {
-    pexelsClient.get('/search', {
-      params: {
-        query: termo,
-        per_page: 1
-      }
-    })
-    .then(result => this.setState({photos: result.data.photos}))
+    if (termo) {
+      pexelsClient
+        .get('/search', {
+          params: {
+            query: termo
+          }
+        })
+        .then(result => this.setState({photos: result.data.photos}))
+    }
   }
 
   // onBuscaRealizada = (termo) => {
