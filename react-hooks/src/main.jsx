@@ -8,7 +8,7 @@ import 'primereact/resources/primereact.min.css'
 import 'primereact/resources/themes/lara-dark-blue/theme.css'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <App />
-  </StrictMode>,
+  // </StrictMode>,
 )
