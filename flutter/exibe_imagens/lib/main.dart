@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'src/app.dart';
-
-void main() {
-  var app = App();
+import 'package:exibe_imagens/src/app.dart';
+void main(){
+  final app = App();
   runApp(app);
 }
